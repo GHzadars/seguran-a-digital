@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecurePass | Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-icon">🔐</div>
+      <div>
+        <strong>SecurePass</strong>
+        <span>Segurança Digital</span>
+      </div>
+    </div>
+    <span class="badge">UNIDADE 2 • ALURA</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">GERADOR DE SENHAS</div>
+      <h1>Crie senhas <span>fortes</span> em segundos.</h1>
+      <p>Personalize sua senha e veja como o tamanho e a variedade de caracteres aumentam a segurança.</p>
+    </section>
+
+    <section class="password-card">
+      <div class="card-label">SUA SENHA</div>
+      <div class="password-row">
+        <div id="password" class="password">Zk7!mQ2@pL9#x</div>
+        <button id="copy" class="copy-btn" type="button" title="Copiar senha">📋 <span>Copiar</span></button>
+      </div>
+      <div class="security-line">
+        <span id="strength-dot"></span>
+        <span id="strength-text">FORTE</span>
+        <span class="separator">•</span>
+        <span id="entropy-text">Alta entropia</span>
+      </div>
+    </section>
+
+    <section class="settings-card">
+      <div class="section-title">
+        <div>
+          <span class="mini-label">CONFIGURAÇÕES</span>
+          <h2>Personalize sua senha</h2>
+        </div>
+        <button id="reset" class="reset-btn" type="button">↻ Restaurar</button>
+      </div>
+
+      <div class="settings-grid">
+        <div class="length-box">
+          <div class="setting-head">
+            <div>
+              <span class="mini-label">TAMANHO</span>
+              <h3>Número de caracteres</h3>
+            </div>
+            <div class="number-display"><span id="length">13</span></div>
+          </div>
+          <input id="length-range" type="range" min="4" max="30" value="13">
+          <div class="range-labels"><span>4</span><span>30</span></div>
+        </div>
+
+        <div class="options-box">
+          <span class="mini-label">CARACTERES</span>
+          <h3>Inclua no conjunto</h3>
+          <div class="checks">
+            <label class="check"><input id="uppercase" type="checkbox" checked><span>Letras maiúsculas</span></label>
+            <label class="check"><input id="lowercase" type="checkbox" checked><span>Letras minúsculas</span></label>
+            <label class="check"><input id="numbers" type="checkbox" checked><span>Números</span></label>
+            <label class="check"><input id="symbols" type="checkbox" checked><span>Símbolos</span></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strength-card">
+      <div class="strength-header">
+        <div>
+          <span class="mini-label">ANÁLISE MATEMÁTICA</span>
+          <h2>Força da senha</h2>
+        </div>
+        <strong id="strength-percent">100%</strong>
+      </div>
+      <div class="bar"><div id="strength-fill"></div></div>
+      <div class="bar-labels"><span>Fraca</span><span>Média</span><span>Forte</span></div>
+      <div class="info">
+        <span>💡</span>
+        <p id="crack-time">Quanto maior o número de combinações possíveis, mais difícil é adivinhar a senha.</p>
+      </div>
+    </section>
+
+    <button id="generate" class="generate" type="button">✨ Gerar nova senha</button>
+
+    <section class="math-card">
+      <div class="math-icon">∑</div>
+      <div>
+        <h2>Por que uma senha maior é mais segura?</h2>
+        <p>O projeto usa uma ideia de <strong>entropia</strong>: <code>comprimento × log₂(conjunto de caracteres)</code>. Aumentar o tamanho e a variedade cria muito mais combinações possíveis.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Projeto desenvolvido por <strong>Gustavo Portela</strong> • Segurança digital: utilizando matemática para programar senhas seguras
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
